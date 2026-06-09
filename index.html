@@ -836,7 +836,7 @@
   //     After deploying Code.gs as a Web App,
   //     replace the placeholder with your URL.
   // ─────────────────────────────────────────────
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxRNjRhrnxai4oaRtDDD_iEGPTqqtvDII9qd8iUKpq06WXi7Vq4XJe-8J1VKGhhvFhCqg/exec';
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxGrjFkeK3s1etgZVnRqs7nO_KJv08yfD5_RCGZcvkmMCQ4PkUKekioxq6-kXLtLWmiMw/exec';
 
   function updateFileLabel(input, labelId, nameId) {
     if (input.files && input.files[0]) {
@@ -907,13 +907,17 @@
       data['Submitted At'] = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
 
       // Send to Apps Script
-      const response = await fetch(SCRIPT_URL, {
-  method: 'POST',
+      const response = await fetch("https://naariledvyapaarregistration.sunshinesocialdesk.workers.dev", {
+  method: "POST",
   headers: {
-    'Content-Type': 'application/json'
+    "Content-Type": "application/json"
   },
-  body: JSON.stringify(data)
-});
+  body: JSON.stringify(formData)
+})
+.then(r => r.json())
+.then(res => console.log(res))
+.catch(err => console.log("ERROR:", err));
+      
       const result = await response.json();
 
       if (result.status === 'success') {
