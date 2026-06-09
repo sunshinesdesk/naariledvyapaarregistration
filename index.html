@@ -1,0 +1,955 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+    span.s2 {font: 12.0px 'Apple Color Emoji'; font-kerning: none}
+    span.s3 {font: 12.0px 'Lucida Grande'; font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;title&gt;Founder Application — Naari Led Vyapaar&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1">&lt;link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>:root {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--saffron: #E8853D;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--deep-rose: #C4516A;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--gold: #D4A843;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--cream: #FDF8F2;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--warm-white: #FFFCF8;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--ink: #1E1410;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--muted: #7A6358;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--border: #E8D9CC;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--fill: #F7F0E8;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--success: #5A8A6A;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: var(--cream);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: var(--ink);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: 'DM Sans', sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 300;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>line-height: 1.7;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>min-height: 100vh;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ── HERO ── */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.hero {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: linear-gradient(160deg, #1E1410 0%, #3A1F1A 55%, #5C2D2A 100%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 72px 24px 80px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position: relative;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>overflow: hidden;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.hero::before {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>content: '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position: absolute; inset: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: radial-gradient(ellipse 80% 60% at 50% 110%, rgba(232,133,61,0.22) 0%, transparent 70%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>pointer-events: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.hero-tagline {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: 'DM Sans', sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 300;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 11px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>letter-spacing: 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: var(--gold);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.hero h1 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: 'Cormorant Garamond', serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: clamp(40px, 8vw, 72px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: #FFF8EE;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>line-height: 1.1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.hero h1 em { font-style: italic; color: var(--saffron); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.hero-sub {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: 'DM Sans', sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 300;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 13px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>letter-spacing: 3px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: rgba(255,248,238,0.5);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom: 40px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.hero-divider {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 48px; height: 2px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: linear-gradient(90deg, var(--saffron), var(--gold));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin: 0 auto 36px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 2px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.hero-description {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>max-width: 560px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin: 0 auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: rgba(255,248,238,0.72);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>line-height: 1.9;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.hero-description strong { color: rgba(255,248,238,0.95); font-weight: 500; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.hero-pills {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>gap: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>flex-wrap: wrap;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-top: 36px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.hero-pill {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 7px 18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border: 1px solid rgba(232,133,61,0.35);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 100px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: rgba(255,248,238,0.65);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>letter-spacing: 0.5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ── LAYOUT ── */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.form-wrapper {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>max-width: 720px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin: 0 auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 0 20px 80px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ── SECTION BLOCK ── */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.section-block { margin-top: 56px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.section-header {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>align-items: flex-start;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>gap: 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom: 28px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding-bottom: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-bottom: 1px solid var(--border);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.section-number {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: 'Cormorant Garamond', serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 42px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 400;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: var(--border);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>line-height: 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>flex-shrink: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-top: -4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.section-label {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 500;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>letter-spacing: 3px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: var(--saffron);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom: 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.section-title {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: 'Cormorant Garamond', serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 26px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: var(--ink);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>line-height: 1.2;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.section-desc {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-top: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: var(--muted);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-style: italic;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ── FIELDS ── */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.field { margin-bottom: 28px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>label {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display: block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 500;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: var(--ink);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.req { color: var(--deep-rose); margin-left: 3px; font-size: 13px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.opt-badge {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display: inline-block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 400;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>letter-spacing: 1px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: var(--muted);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border: 1px solid var(--border);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 1px 6px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-left: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>vertical-align: middle;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.field-hint {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 12.5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: var(--muted);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>line-height: 1.6;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>input[type="text"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>input[type="email"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>input[type="tel"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>textarea,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>select {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: var(--warm-white);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border: 1.5px solid var(--border);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 13px 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: 'DM Sans', sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 14.5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 300;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: var(--ink);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transition: border-color 0.2s, box-shadow 0.2s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>outline: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>-webkit-appearance: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>input:focus, textarea:focus, select:focus {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-color: var(--saffron);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>box-shadow: 0 0 0 3px rgba(232,133,61,0.12);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>textarea { resize: vertical; min-height: 120px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>textarea.large { min-height: 160px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>select {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237A6358' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-repeat: no-repeat;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-position: right 16px center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding-right: 40px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ── RADIO / CHECKBOX ── */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.options-grid {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display: grid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>gap: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.options-col { display: flex; flex-direction: column; gap: 10px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.option-item {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>gap: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: var(--warm-white);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border: 1.5px solid var(--border);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 12px 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transition: border-color 0.18s, background 0.18s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>user-select: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.option-item:hover { border-color: var(--saffron); background: #FEF6EE; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.option-item input[type="radio"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.option-item input[type="checkbox"] {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 18px; height: 18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>accent-color: var(--saffron);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>flex-shrink: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.option-item span { font-size: 14px; color: var(--ink); font-weight: 300; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ── CONSENT ── */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.consent-items { display: flex; flex-direction: column; gap: 14px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.consent-item {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>align-items: flex-start;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>gap: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: var(--fill);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border: 1.5px solid var(--border);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 14px 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transition: border-color 0.18s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.consent-item:hover { border-color: var(--saffron); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.consent-item input[type="checkbox"] {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 18px; height: 18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>accent-color: var(--saffron);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>flex-shrink: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-top: 2px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.consent-item span { font-size: 13.5px; color: var(--ink); line-height: 1.65; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ── FILE UPLOAD ── */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.file-upload {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>gap: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border: 2px dashed var(--border);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transition: border-color 0.2s, background 0.2s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: var(--warm-white);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.file-upload:hover { border-color: var(--saffron); background: #FEF6EE; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.file-upload input[type="file"] { display: none; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.file-upload-icon {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 40px; height: 40px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: var(--fill);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 50%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display: flex; align-items: center; justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>flex-shrink: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.file-upload-icon svg { width: 18px; height: 18px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.file-upload-text strong { display: block; font-size: 14px; font-weight: 500; color: var(--saffron); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.file-upload-text span { font-size: 12px; color: var(--muted); }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ── SUBMIT AREA ── */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.submit-area {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-top: 56px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: linear-gradient(140deg, #1E1410 0%, #3A1F1A 100%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 48px 40px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.submit-area h3 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: 'Cormorant Garamond', serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 28px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: #FFF8EE;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.submit-area p { font-size: 14px; color: rgba(255,248,238,0.6); margin-bottom: 32px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.btn-submit {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display: inline-block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: linear-gradient(135deg, var(--saffron) 0%, var(--deep-rose) 100%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 100px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 16px 52px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: 'DM Sans', sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 500;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>letter-spacing: 0.5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transition: opacity 0.2s, transform 0.15s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>box-shadow: 0 4px 24px rgba(196,81,106,0.35);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.btn-submit:hover { opacity: 0.9; transform: translateY(-1px); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.btn-submit:active { transform: translateY(0); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ── LOADING OVERLAY ── */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.loading-overlay {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position: fixed; inset: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: rgba(30,20,16,0.7);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>z-index: 999;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>flex-direction: column;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>gap: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.loading-overlay.visible { display: flex; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.spinner {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 48px; height: 48px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border: 3px solid rgba(255,248,238,0.2);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-top-color: var(--saffron);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 50%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>animation: spin 0.8s linear infinite;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>@keyframes spin { to { transform: rotate(360deg); } }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.loading-text {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: 'DM Sans', sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 300;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: rgba(255,248,238,0.85);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>letter-spacing: 0.5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ── ERROR BANNER ── */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.error-banner {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: #FEF0F0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border: 1.5px solid #F5C1C1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 16px 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-top: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: #8B2020;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>line-height: 1.6;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.error-banner.visible { display: block; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ── CONFIRMATION ── */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.confirmation {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 80px 24px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>max-width: 560px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin: 0 auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.confirmation.visible { display: block; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.conf-emoji { font-size: 48px; margin-bottom: 24px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.confirmation h2 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: 'Cormorant Garamond', serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 38px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: var(--ink);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom: 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.confirmation p { font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 12px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.conf-sign {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-top: 36px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 13px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>letter-spacing: 2px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: var(--saffron);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 500;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ── FOOTER ── */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>footer {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 32px 24px 48px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-top: 1px solid var(--border);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-top: 40px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>footer p { font-size: 13px; color: var(--muted); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>footer strong {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: 'Cormorant Garamond', serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 17px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: var(--ink);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display: block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom: 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>@media (max-width: 540px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.section-header { gap: 12px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.section-number { font-size: 32px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.options-grid { grid-template-columns: 1fr; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.submit-area { padding: 36px 24px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.hero { padding: 56px 20px 64px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;!-- LOADING OVERLAY --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="loading-overlay" id="loadingOverlay"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="spinner"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p class="loading-text"&gt;Submitting your application...&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;!-- HERO --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;header class="hero"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p class="hero-tagline"&gt;A Flagship Initiative by The Legit Talks&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;h1&gt;Naari Led&lt;br&gt;&lt;em&gt;Vyapaar&lt;/em&gt;&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p class="hero-sub"&gt;Founder Application Form&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="hero-divider"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="hero-description"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;Every business begins with courage. &lt;strong&gt;We'd love to hear your story. </span><span class="s2">💛</span><span class="s1">&lt;/strong&gt;&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;We believe that every woman who chooses to build something — whether from her home, a small office, or a dream in her notebook — has a story worth sharing.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;&lt;strong&gt;This is not a competition.&lt;/strong&gt;&lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;strong&gt;This is not an investment pitch.&lt;/strong&gt;&lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>This is a movement to celebrate women who dared to begin.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;Please answer honestly. There are no right or wrong answers.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="hero-pills"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;span class="hero-pill"&gt;Discover&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;span class="hero-pill"&gt;Connect&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;span class="hero-pill"&gt;Rise&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/header&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;!-- FORM --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;main class="form-wrapper" id="formContainer"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;form id="mainForm"&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- SECTION 1: ABOUT YOU --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="section-block"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="section-header"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span class="section-number"&gt;01&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="section-meta"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="section-label"&gt;Section One&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;About You&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="section-desc"&gt;Let's begin with getting to know you.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;Full Name &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;input type="text" name="Full Name" placeholder="Your full name" required&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;Contact Number &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;input type="tel" name="Contact Number" placeholder="+91 XXXXX XXXXX" required&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;Email Address &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;input type="email" name="Email Address" placeholder="you@example.com" required&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;City &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;input type="text" name="City" placeholder="Your city" required&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;State &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;select name="State" required&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option value="" disabled selected&gt;Select your state&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option&gt;Andhra Pradesh&lt;/option&gt;&lt;option&gt;Arunachal Pradesh&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option&gt;Assam&lt;/option&gt;&lt;option&gt;Bihar&lt;/option&gt;&lt;option&gt;Chhattisgarh&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option&gt;Goa&lt;/option&gt;&lt;option&gt;Gujarat&lt;/option&gt;&lt;option&gt;Haryana&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option&gt;Himachal Pradesh&lt;/option&gt;&lt;option&gt;Jharkhand&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option&gt;Karnataka&lt;/option&gt;&lt;option&gt;Kerala&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option&gt;Madhya Pradesh&lt;/option&gt;&lt;option&gt;Maharashtra&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option&gt;Manipur&lt;/option&gt;&lt;option&gt;Meghalaya&lt;/option&gt;&lt;option&gt;Mizoram&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option&gt;Nagaland&lt;/option&gt;&lt;option&gt;Odisha&lt;/option&gt;&lt;option&gt;Punjab&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option&gt;Rajasthan&lt;/option&gt;&lt;option&gt;Sikkim&lt;/option&gt;&lt;option&gt;Tamil Nadu&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option&gt;Telangana&lt;/option&gt;&lt;option&gt;Tripura&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option&gt;Uttar Pradesh&lt;/option&gt;&lt;option&gt;Uttarakhand&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option&gt;West Bengal&lt;/option&gt;&lt;option&gt;Delhi&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option&gt;Jammu &amp;amp; Kashmir&lt;/option&gt;&lt;option&gt;Ladakh&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option&gt;Chandigarh&lt;/option&gt;&lt;option&gt;Puducherry&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option&gt;Andaman &amp;amp; Nicobar Islands&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option&gt;Dadra &amp;amp; Nagar Haveli&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;option&gt;Lakshadweep&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/select&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;Instagram Profile &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="field-hint"&gt;Share your business or personal Instagram handle. Example: @yourbusiness or @yourname&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;input type="text" name="Instagram Profile" placeholder="@yourhandle" required&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;LinkedIn Profile &lt;span class="opt-badge"&gt;Optional&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;input type="text" name="LinkedIn Profile" placeholder="linkedin.com/in/yourprofile"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- SECTION 2: ABOUT YOUR BUSINESS --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="section-block"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="section-header"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span class="section-number"&gt;02&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="section-meta"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="section-label"&gt;Section Two&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;About Your Business&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="section-desc"&gt;Tell us about what you're building.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;Business Name &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;input type="text" name="Business Name" placeholder="Your business name" required&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;What do you do? &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="field-hint"&gt;Describe your business in simple words. Imagine explaining it to a friend.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;textarea class="large" name="Business Description" placeholder="Tell us about your business..." required&gt;&lt;/textarea&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;Which category best describes your business? &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="options-grid" id="categoryGroup"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Business Category" value="Home Business" required&gt;&lt;span&gt;Home Business&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Business Category" value="Product Brand"&gt;&lt;span&gt;Product Brand&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Business Category" value="Service Business"&gt;&lt;span&gt;Service Business&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Business Category" value="Freelancer"&gt;&lt;span&gt;Freelancer&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Business Category" value="Consultant"&gt;&lt;span&gt;Consultant&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Business Category" value="Artist / Creator"&gt;&lt;span&gt;Artist / Creator&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Business Category" value="Coach"&gt;&lt;span&gt;Coach&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Business Category" value="Startup"&gt;&lt;span&gt;Startup&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Business Category" value="Social Enterprise"&gt;&lt;span&gt;Social Enterprise&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Business Category" value="Sustainable Business"&gt;&lt;span&gt;Sustainable Business&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Business Category" value="Other"&gt;&lt;span&gt;Other&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;How long have you been building your business? &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="options-col"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Business Duration" value="Less than 6 months" required&gt;&lt;span&gt;Less than 6 months&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Business Duration" value="6 months – 1 year"&gt;&lt;span&gt;6 months – 1 year&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Business Duration" value="1 – 3 years"&gt;&lt;span&gt;1 – 3 years&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Business Duration" value="3 – 5 years"&gt;&lt;span&gt;3 – 5 years&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Business Duration" value="More than 5 years"&gt;&lt;span&gt;More than 5 years&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;Do you work full-time on your business? &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="options-col"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Works Full Time" value="Yes" required&gt;&lt;span&gt;Yes&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Works Full Time" value="No"&gt;&lt;span&gt;No&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Works Full Time" value="Alongside a job"&gt;&lt;span&gt;Alongside a job&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Works Full Time" value="Alongside studies"&gt;&lt;span&gt;Alongside studies&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Works Full Time" value="Alongside family responsibilities"&gt;&lt;span&gt;Alongside family responsibilities&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- SECTION 3: YOUR STORY --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="section-block"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="section-header"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span class="section-number"&gt;03&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="section-meta"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="section-label"&gt;Section Three&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Your Story&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="section-desc"&gt;Because every business begins with a story. This section is the heart of your application. Take your time.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;What inspired you to start your business? &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="field-hint"&gt;Tell us about the moment you decided to begin.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;textarea class="large" name="Inspiration" placeholder="Share your inspiration..." required&gt;&lt;/textarea&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;What has been the most magical moment in your journey so far? &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="field-hint"&gt;A customer message, your first sale, a proud family moment, or anything that reminded you why you started.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;textarea class="large" name="Magical Moment" placeholder="Tell us about that moment..." required&gt;&lt;/textarea&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;What has been the hardest part of your journey? &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="field-hint"&gt;Be honest. We celebrate courage, not perfection.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;textarea class="large" name="Hardest Part" placeholder="Be real with us..." required&gt;&lt;/textarea&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;What is the biggest challenge you're facing today? &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;textarea name="Biggest Challenge Today" placeholder="What's in front of you right now?" required&gt;&lt;/textarea&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;What is one thing you wish more people knew about your business? &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;textarea name="One Thing People Should Know" placeholder="Something you'd love the world to know..." required&gt;&lt;/textarea&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- SECTION 4: COMMUNITY --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="section-block"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="section-header"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span class="section-number"&gt;04&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="section-meta"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="section-label"&gt;Section Four&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Community&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="section-desc"&gt;Great communities are built through support and shared growth.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;How can the Naari Led Vyapaar community support you? &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="field-hint"&gt;Examples: Visibility · Collaborations · Networking · Marketing · Learning · Confidence · Referrals&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;textarea name="Community Support Needed" placeholder="How can we support you?" required&gt;&lt;/textarea&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;How would you like to contribute to this community? &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="field-hint"&gt;Communities grow when everyone gives something back. How would you like to help other women entrepreneurs?&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;textarea name="Community Contribution" placeholder="How would you like to give back?" required&gt;&lt;/textarea&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;If another woman is thinking about starting her business today, what would you tell her? &lt;span class="opt-badge"&gt;Optional&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="field-hint"&gt;Your answer may inspire someone else to begin.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;textarea name="Advice to Other Women" placeholder="What wisdom would you share?"&gt;&lt;/textarea&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- SECTION 5: MEDIA --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="section-block"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="section-header"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span class="section-number"&gt;05&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="section-meta"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="section-label"&gt;Section Five&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Media&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="section-desc"&gt;Help us put a face to your story.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;Upload a clear photograph of yourself &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="field-hint"&gt;Preferred: Portrait photograph&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label class="file-upload" id="upload1Label"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="file" name="Your Photograph" accept="image/*" required onchange="updateFileLabel(this,'upload1Label','upload1Name')"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="file-upload-icon"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;svg viewBox="0 0 24 24" fill="none" stroke="#E8853D" stroke-width="2" stroke-linecap="round"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/&gt;&lt;polyline points="17 8 12 3 7 8"/&gt;&lt;line x1="12" y1="3" x2="12" y2="15"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="file-upload-text"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;strong id="upload1Name"&gt;Click to upload photo&lt;/strong&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span&gt;JPG, PNG or WEBP · Max 5MB&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;Upload your business logo &lt;span class="opt-badge"&gt;Optional&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label class="file-upload" id="upload2Label"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="file" name="Business Logo" accept="image/*" onchange="updateFileLabel(this,'upload2Label','upload2Name')"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="file-upload-icon"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;svg viewBox="0 0 24 24" fill="none" stroke="#E8853D" stroke-width="2" stroke-linecap="round"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/&gt;&lt;polyline points="17 8 12 3 7 8"/&gt;&lt;line x1="12" y1="3" x2="12" y2="15"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="file-upload-text"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;strong id="upload2Name"&gt;Click to upload logo&lt;/strong&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span&gt;JPG, PNG or SVG · Max 5MB&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;Upload one photograph that represents your business &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="field-hint"&gt;This could be: Your product · Your workspace · Your service · Your team · You at work&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label class="file-upload" id="upload3Label"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="file" name="Business Photograph" accept="image/*" required onchange="updateFileLabel(this,'upload3Label','upload3Name')"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="file-upload-icon"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;svg viewBox="0 0 24 24" fill="none" stroke="#E8853D" stroke-width="2" stroke-linecap="round"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/&gt;&lt;polyline points="17 8 12 3 7 8"/&gt;&lt;line x1="12" y1="3" x2="12" y2="15"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="file-upload-text"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;strong id="upload3Name"&gt;Click to upload business photo&lt;/strong&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span&gt;JPG, PNG or WEBP · Max 5MB&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- SECTION 6: SOCIAL MEDIA &amp; COMMUNITY --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="section-block"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="section-header"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span class="section-number"&gt;06&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="section-meta"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="section-label"&gt;Section Six&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Social Media &amp;amp; Community&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="section-desc"&gt;We'd love to celebrate your journey with the world.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;Would you like to be featured on The Legit Talks platform? &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="options-col"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Featured on Platform" value="Yes" required&gt;&lt;span&gt;Yes&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Featured on Platform" value="Absolutely"&gt;&lt;span&gt;Absolutely&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Featured on Platform" value="I'd love to"&gt;&lt;span&gt;I'd love to&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Featured on Platform" value="Maybe in the future"&gt;&lt;span&gt;Maybe in the future&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;If selected, are you comfortable participating in an Instagram Live conversation? &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="options-col"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Instagram Live" value="Yes" required&gt;&lt;span&gt;Yes&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Instagram Live" value="No"&gt;&lt;span&gt;No&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Instagram Live" value="Maybe"&gt;&lt;span&gt;Maybe&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;Would you like to join the Naari Led Vyapaar Founder Community? &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="options-col"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Join Community" value="Yes" required&gt;&lt;span&gt;Yes&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="option-item"&gt;&lt;input type="radio" name="Join Community" value="No"&gt;&lt;span&gt;No&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- SECTION 7: CONSENT --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="section-block"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="section-header"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span class="section-number"&gt;07&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="section-meta"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="section-label"&gt;Section Seven&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Consent&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="section-desc"&gt;Please review and confirm the following.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;Consent &amp;amp; Permission &lt;span class="req"&gt;*&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="consent-items"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="consent-item"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;input type="checkbox" name="Consent 1" value="Confirmed" required&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span&gt;I confirm that the information shared above is true to the best of my knowledge.&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="consent-item"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;input type="checkbox" name="Consent 2" value="Confirmed" required&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span&gt;I grant The Legit Talks permission to use my submitted story, photographs, videos, and business details for storytelling, educational, promotional, and community-building purposes related to Naari Led Vyapaar across digital and offline platforms.&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label class="consent-item"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;input type="checkbox" name="Consent 3" value="Confirmed" required&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span&gt;I understand that submission does not guarantee selection for a feature or campaign activity.&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- SECTION 8: ANYTHING ELSE --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="section-block"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="section-header"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span class="section-number"&gt;08&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="section-meta"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="section-label"&gt;Section Eight&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Anything Else?&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="field"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;label&gt;Is there anything else you'd like us to know? &lt;span class="opt-badge"&gt;Optional&lt;/span&gt;&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="field-hint"&gt;This space is entirely yours. Share a memory, dream, lesson, challenge, or anything else that feels important to your story.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;textarea class="large" name="Anything Else" placeholder="Your space to say anything..."&gt;&lt;/textarea&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- ERROR BANNER --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="error-banner" id="errorBanner"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s2">⚠️</span><span class="s1"> Something went wrong. Please check your connection and try again. If the problem persists, email us directly.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- SUBMIT --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="submit-area"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h3&gt;Ready to share your story?&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;Every application is read with care. Thank you for trusting us with yours.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button type="submit" class="btn-submit" id="submitBtn"&gt;Submit My Application </span><span class="s3">→</span><span class="s1">&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/form&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;!-- CONFIRMATION --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="confirmation" id="confirmation"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="conf-emoji"&gt;</span><span class="s2">💛</span><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;h2&gt;Thank You&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p&gt;Thank you for trusting us with your story.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p&gt;Whether your business is one day old or ten years old, your courage deserves to be celebrated.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p&gt;Our team will carefully review every application. If selected, you will receive further communication regarding community onboarding and upcoming opportunities.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p&gt;&lt;strong&gt;Until then, keep building.&lt;br&gt;The world needs what you're creating.&lt;/strong&gt;&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p class="conf-sign"&gt;Discover · Connect · Rise&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/main&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;footer&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;strong&gt;Naari Led Vyapaar&lt;/strong&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p&gt;A flagship initiative by The Legit Talks&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/footer&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// ─────────────────────────────────────────────</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// </span><span class="s2">⚙️</span><span class="s1"><span class="Apple-converted-space">  </span>PASTE YOUR GOOGLE APPS SCRIPT URL BELOW</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// <span class="Apple-converted-space">    </span>After deploying Code.gs as a Web App,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// <span class="Apple-converted-space">    </span>replace the placeholder with your URL.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// ─────────────────────────────────────────────</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxe8Of8LOeqyvPrSMmKITf_6jpBICuOTcioK1zInYtE4CtUlqFIyWIArht-XOHY6HtpKA/exec';</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>function updateFileLabel(input, labelId, nameId) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>if (input.files &amp;&amp; input.files[0]) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById(nameId).textContent = input.files[0].name;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// Convert file to base64 for sending via JSON</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>function fileToBase64(file) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>return new Promise((resolve, reject) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (!file) { resolve(null); return; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const reader = new FileReader();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>reader.onload = () =&gt; resolve({</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>name: file.name,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: file.type,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>data: reader.result.split(',')[1]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>reader.onerror = reject;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>reader.readAsDataURL(file);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>document.getElementById('mainForm').addEventListener('submit', async function(e) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>e.preventDefault();</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const form = e.target;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const submitBtn = document.getElementById('submitBtn');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const loadingOverlay = document.getElementById('loadingOverlay');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const errorBanner = document.getElementById('errorBanner');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Hide previous errors</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>errorBanner.classList.remove('visible');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Basic validation for radio groups</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const radioGroups = ['Business Category', 'Business Duration', 'Works Full Time',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                         </span>'Featured on Platform', 'Instagram Live', 'Join Community'];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>for (const group of radioGroups) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (!form.querySelector(`input[name="${group}"]:checked`)) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>alert(`Please select an answer for: "${group}"`);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Show loading</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>submitBtn.disabled = true;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>loadingOverlay.classList.add('visible');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>try {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Collect all text/select/radio/checkbox data</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const data = {};</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const formData = new FormData(form);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>for (const [key, value] of formData.entries()) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Skip file fields — handled separately</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (form.querySelector(`[name="${key}"]`)?.type === 'file') continue;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>data[key] = value;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Collect file uploads as base64</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const photoInput<span class="Apple-converted-space">    </span>= form.querySelector('[name="Your Photograph"]');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const logoInput <span class="Apple-converted-space">    </span>= form.querySelector('[name="Business Logo"]');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const bizPhotoInput = form.querySelector('[name="Business Photograph"]');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>data['Your Photograph']<span class="Apple-converted-space">    </span>= await fileToBase64(photoInput?.files[0]);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>data['Business Logo']<span class="Apple-converted-space">      </span>= await fileToBase64(logoInput?.files[0]);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>data['Business Photograph']= await fileToBase64(bizPhotoInput?.files[0]);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Add submission timestamp</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>data['Submitted At'] = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Send to Apps Script</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const response = await fetch(SCRIPT_URL, {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>method: 'POST',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body: JSON.stringify(data)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const result = await response.json();</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (result.status === 'success') {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>loadingOverlay.classList.remove('visible');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>form.style.display = 'none';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById('confirmation').classList.add('visible');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>window.scrollTo({ top: document.querySelector('.form-wrapper').offsetTop, behavior: 'smooth' });</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>throw new Error(result.message || 'Unknown error');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>} catch (err) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>console.error(err);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>loadingOverlay.classList.remove('visible');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>submitBtn.disabled = false;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>errorBanner.classList.add('visible');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>window.scrollTo({ top: errorBanner.offsetTop - 40, behavior: 'smooth' });</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>});</span></p>
+<p class="p1"><span class="s1">&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
