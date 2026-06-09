@@ -836,7 +836,7 @@
   //     After deploying Code.gs as a Web App,
   //     replace the placeholder with your URL.
   // ─────────────────────────────────────────────
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxe8Of8LOeqyvPrSMmKITf_6jpBICuOTcioK1zInYtE4CtUlqFIyWIArht-XOHY6HtpKA/exec';
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxdDtTvc1TvRxzByW1_twG4R2sMN173_HVNZoDvS66SL2_1_khYT6dSMs_NcYZNzO82/exec';
 
   function updateFileLabel(input, labelId, nameId) {
     if (input.files && input.files[0]) {
@@ -908,10 +908,12 @@
 
       // Send to Apps Script
       const response = await fetch(SCRIPT_URL, {
-        method: 'POST',
-        body: JSON.stringify(data)
-      });
-
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(data)
+});
       const result = await response.json();
 
       if (result.status === 'success') {
