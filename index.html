@@ -831,12 +831,7 @@
 </footer>
 
 <script>
-  // ─────────────────────────────────────────────
-  // ⚙️  PASTE YOUR GOOGLE APPS SCRIPT URL BELOW
-  //     After deploying Code.gs as a Web App,
-  //     replace the placeholder with your URL.
-  // ─────────────────────────────────────────────
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz_jppbc0w7POz6RuiAtJQ52sHH_vsJ82SHE1X_3HQIQc7C_K58tmLKi7F4MWBtW7Kt/exec';
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxMlHdLVWcdKjDFNUzDwoWO1YHutB1KD5Ilr2kglTRV2qDhY0P_kDwdfpM82FquceLJTA/exec';
 
   function updateFileLabel(input, labelId, nameId) {
     if (input.files && input.files[0]) {
@@ -844,7 +839,6 @@
     }
   }
 
-  // Convert file to base64 for sending via JSON
   function fileToBase64(file) {
     return new Promise((resolve, reject) => {
       if (!file) { resolve(null); return; }
@@ -867,57 +861,63 @@
     const loadingOverlay = document.getElementById('loadingOverlay');
     const errorBanner = document.getElementById('errorBanner');
 
-    // Hide previous errors
     errorBanner.classList.remove('visible');
 
-    // Basic validation for radio groups
+    // Validate radio groups
     const radioGroups = ['Business Category', 'Business Duration', 'Works Full Time',
                          'Featured on Platform', 'Instagram Live', 'Join Community'];
     for (const group of radioGroups) {
       if (!form.querySelector(`input[name="${group}"]:checked`)) {
-        alert(`Please select an answer for: "${group}"`);
+        alert('Please select an answer for: ' + group);
         return;
       }
     }
 
-    // Show loading
     submitBtn.disabled = true;
     loadingOverlay.classList.add('visible');
 
     try {
-      // Collect all text/select/radio/checkbox data
       const data = {};
-      const formData = new FormData(form);
-      for (const [key, value] of formData.entries()) {
-        // Skip file fields — handled separately
-        if (form.querySelector(`[name="${key}"]`)?.type === 'file') continue;
-        data[key] = value;
-      }
 
-      // Collect file uploads as base64
+      // Text, email, tel, select
+      form.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], select').forEach(el => {
+        if (el.name) data[el.name] = el.value;
+      });
+
+      // All textareas — long responses
+      form.querySelectorAll('textarea').forEach(el => {
+        if (el.name) data[el.name] = el.value;
+      });
+
+      // Radio — checked only
+      form.querySelectorAll('input[type="radio"]:checked').forEach(el => {
+        if (el.name) data[el.name] = el.value;
+      });
+
+      // Checkboxes — checked only
+      form.querySelectorAll('input[type="checkbox"]:checked').forEach(el => {
+        if (el.name) data[el.name] = el.value;
+      });
+
+      // File uploads as base64
       const photoInput    = form.querySelector('[name="Your Photograph"]');
       const logoInput     = form.querySelector('[name="Business Logo"]');
       const bizPhotoInput = form.querySelector('[name="Business Photograph"]');
+      data['Your Photograph']     = await fileToBase64(photoInput?.files[0]);
+      data['Business Logo']       = await fileToBase64(logoInput?.files[0]);
+      data['Business Photograph'] = await fileToBase64(bizPhotoInput?.files[0]);
 
-      data['Your Photograph']    = await fileToBase64(photoInput?.files[0]);
-      data['Business Logo']      = await fileToBase64(logoInput?.files[0]);
-      data['Business Photograph']= await fileToBase64(bizPhotoInput?.files[0]);
-
-      // Add submission timestamp
       data['Submitted At'] = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
 
-      // Send to Apps Script
-      // Apps Script requires no-cors from external domains.
-      // With no-cors we can't read the response — so we assume success
-      // if the fetch itself doesn't throw a network error.
-      await fetch(SCRIPT_URL, {
+      // POST to Apps Script using text/plain to trigger doPost correctly
+      const response = await fetch(SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
-        headers: { 'Content-Type': 'text/plain' },
+        headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
         body: JSON.stringify(data)
       });
 
-      // If we reach here, the request was sent successfully
+      // no-cors means opaque response — if we get here without throw, it worked
       loadingOverlay.classList.remove('visible');
       form.style.display = 'none';
       document.getElementById('confirmation').classList.add('visible');
